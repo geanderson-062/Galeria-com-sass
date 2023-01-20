@@ -1,0 +1,73 @@
+@use 'variables' 
+//importando as vareaveis do sass 
+@use 'mixins'
+//importando mixins para reaproveitamento de codigo 
+
+//passando elementos para estilização base 
+*
+    font-family: 'josefin Sans'
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+    //estilização do corpo
+    body
+        background-color: variables.$bg-color
+        color: variables.$text-color
+
+    //estilização das tags a 
+    a
+        color: variables.$text-color
+        text-decoration: none
+        transition: .4s
+
+    ul
+        list-style: none
+
+//trabalhando header
+.header
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+
+    &-brand // .header-brand
+        color: variables.$primary-color
+        font-size: 3rem
+
+    &-navbar //.header-navbar
+
+    ul
+        height: 100%
+    @include mixins.flex-center
+
+    li
+        margin: 0 1rem
+        text-transform: uppercase
+        font-size: .8rem
+
+//trabalhando a marcação de pagina ativa
+.active
+    color: variables.$secondary-color
+
+    a
+    &:hover
+        color: variables.$secondary-color
+
+     //estilizando a barra social 
+    &-social-media
+
+    ul
+    @include mixins.flex-center
+    height: 100%
+
+    li
+        margin: 0 1rem
+
+    a
+    &:hover
+        color: variables.$primary-color
+
+.gallery
+    @include mixins.flex-center
+    @include mixins.container
+    flex-wrap: wrap

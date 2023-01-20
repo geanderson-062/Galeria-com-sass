@@ -1,0 +1,13 @@
+@use 'variables'
+//utilizando as vereaveis 
+
+@mixin container
+    max-width: variables.$container-widht //largura maxima
+    padding: 1.5rem 0 //padding para superior e inferior
+    margin: 0 auto //centralize o conteudo
+
+//centralizando o conteudo da pagina 
+@mixin flex-center
+    display: flex
+    align-items: center
+    justify-content: center
